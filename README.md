@@ -21,3 +21,4 @@
 
     run mongosh command in terminal  and run use testdb command.
     then register an user from frontend.
+* To view pagination atleast 02 record insert must be there.
