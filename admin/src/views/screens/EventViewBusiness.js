@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Table, Row, Col } from 'react-bootstrap'
-import { Button, UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle, CardBody, CardText  } from 'reactstrap'
+import { Button, UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle, CardBody, Card, CardHeader, CardTitle, CardText  } from 'reactstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
@@ -9,6 +9,7 @@ import Paginate from '../../components/PaginateBisinessEvent'
 import {Link, NavLink } from "react-router-dom"
 import { MoreVertical, Edit, Trash } from 'react-feather'
 import { AbilityContext } from '@src/utility/context/Can'
+import Select from 'react-select'
 
 import '@styles/react/libs/flatpickr/flatpickr.scss'
 
@@ -81,7 +82,7 @@ const EventListScreen = ({ history, match }) => {
 
   return (
     <>
-      {/* <Card>
+      <Card>
         <CardHeader>
           <CardTitle tag='h4'>Search Filter</CardTitle>
         </CardHeader>
@@ -91,19 +92,16 @@ const EventListScreen = ({ history, match }) => {
               <Select
                 className='react-select'
                 classNamePrefix='select'
-                options={roleOptions}
                 onChange={data => {
                   dispatch(
-                    listFilterEmail({
-                      domain: data.value
-                    })
+                    
                   )
                 }}
               />
             </Col>
           </Row>
         </CardBody>
-      </Card> */}
+      </Card>
       <Row className='align-items-center'>
         <Col>
           <h1>Crud Application</h1>

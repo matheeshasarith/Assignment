@@ -116,7 +116,7 @@ const MultipleColumnForm = ({ match, history }) => {
             <Col sm='12'>
               <FormGroup className='d-flex mb-0'>
                 <Button.Ripple className='mr-1' color='primary' type='submit'>
-                  Create Event
+                  Create
                 </Button.Ripple>
               </FormGroup>
             </Col>
