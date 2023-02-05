@@ -57,7 +57,7 @@ export const listEvents = (keyword = '', pageNumber = '') => async (
     } else {
       //const { data } = await axios.get(`/api/events?keyword=${keyword}&pageNumber=${pageNumber}`, config)
 
-      const { data } = await axios.get(`https://api.api-ninjas.com/v1/animals?name=dog`, config)
+      const { data } = await axios.get(`https://api.api-ninjas.com/v1/animals?name=horse`, config)
 
       console.log(data)
 
