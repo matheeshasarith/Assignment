@@ -77,9 +77,14 @@ const ExtensionsRoutes = [
   {
     path: '/event-view-Business',
     component: lazy(() => import('../../views/screens/EventViewBusiness')),
+    // meta: {
+    //   action: 'manage',
+    //   resource: 'ACL'
+    // }
+
+    //layout: 'BlankLayout',
     meta: {
-      action: 'manage',
-      resource: 'ACL'
+      publicRoute: true
     }
   },
   {

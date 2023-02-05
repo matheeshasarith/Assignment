@@ -30,7 +30,7 @@ export const eventListReducer = (state = { events: [] }, action) => {
     case EVENT_LIST_SUCCESS:
       return {
         loading: false,
-        events: action.payload.events,
+        events: action.payload,
         pages: action.payload.pages,
         page: action.payload.page
       }

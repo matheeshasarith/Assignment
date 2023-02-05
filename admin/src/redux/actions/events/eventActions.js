@@ -39,12 +39,15 @@ export const listEvents = (keyword = '', pageNumber = '') => async (
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`
+        Authorization: `Bearer ${userInfo.token}`,
+        'X-Api-Key': '+gCAK9aqlI5sJ/5Y1goIog==hRWSuqDJxfSVIxWb'
       }
     }
       
     if (userInfo.isAdmin) {
-      const { data } = await axios.get(`/api/events/getEventsAdmin?keyword=${keyword}&pageNumber=${pageNumber}`, config)
+      //const { data } = await axios.get(`/api/events/getEventsAdmin?keyword=${keyword}&pageNumber=${pageNumber}`, config)
+
+      const { data } = await axios.get(`https://api.api-ninjas.com/v1/animals?name=cat`, config)
 
       dispatch({
         type: EVENT_LIST_SUCCESS,
@@ -52,7 +55,11 @@ export const listEvents = (keyword = '', pageNumber = '') => async (
       })
 
     } else {
-      const { data } = await axios.get(`/api/events?keyword=${keyword}&pageNumber=${pageNumber}`, config)
+      //const { data } = await axios.get(`/api/events?keyword=${keyword}&pageNumber=${pageNumber}`, config)
+
+      const { data } = await axios.get(`https://api.api-ninjas.com/v1/animals?name=dog`, config)
+
+      console.log(data)
 
       dispatch({
         type: EVENT_LIST_SUCCESS,
