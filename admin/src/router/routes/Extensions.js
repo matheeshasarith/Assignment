@@ -38,14 +38,6 @@ const ExtensionsRoutes = [
     component: lazy(() => import('../../views/extensions/swiper'))
   },
   {
-    path: '/access-control',
-    component: lazy(() => import('../../views/extensions/access-control')),
-    meta: {
-      action: 'read',
-      resource: 'ACL'
-    }
-  },
-  {
     path: '/extensions/ratings',
     component: lazy(() => import('../../views/extensions/ratings'))
   },
@@ -68,26 +60,7 @@ const ExtensionsRoutes = [
   {
     path: '/extensions/i18n',
     component: lazy(() => import('../../views/extensions/i18n'))
-  },
-  {
-    path: '/home',
-    component: lazy(() => import('../../views/screens/Home'))
-  },
-  {
-    path: '/error',
-    component: lazy(() => import('../../views/screens/Error')),
-    layout: 'BlankLayout'
-  },
-  {
-
-    path: '/access-control',
-    component: lazy(() => import('../../views/screens/access-control')),
-    meta: {
-      action: 'read',
-      resource: 'ACL'
-    }
   }
-  
 ]
 
 export default ExtensionsRoutes
