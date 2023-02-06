@@ -1,17 +1,11 @@
-import React, { useEffect, useContext, Fragment, useState } from 'react'
-import { LinkContainer } from 'react-router-bootstrap'
-import { Table, Row, Col } from 'react-bootstrap'
-import { Button, Badge, Card, CardHeader, CardTitle, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Label, Input } from 'reactstrap'
+import React, { useEffect, Fragment, useState } from 'react'
+import { Row, Col } from 'react-bootstrap'
+import { Card, CardHeader, CardTitle, Label, Input } from 'reactstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { ChevronDown, Share, Printer, FileText, File, Grid, Copy, Plus } from 'react-feather'
+import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
 import ReactPaginate from 'react-paginate'
-import Message from '../../../components/Message'
-import Loader from '../../../components/Loader'
-import { Link, NavLink } from "react-router-dom"
-import { AbilityContext } from '@src/utility/context/Can'
 import { listEvents } from '../../../redux/actions/events/eventActions'
-import { EVENT_CREATE_RESET } from '../../../redux/constants/events/eventConstants'
 
 const EventListScreen = ({ match, history }) => {
 
