@@ -40,7 +40,14 @@ const EventListScreen = ({ match, history }) => {
       selector: 'locations',
       sortable: true,
       minWidth: '100px'
+    },
+    {
+      name: 'LOCATIONS',
+      selector: 'characteristics.color',
+      sortable: true,
+      minWidth: '100px'
     }
+    
   ]
 
   const handleFilter = e => {

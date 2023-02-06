@@ -6,7 +6,6 @@ import {
   EVENT_LIST_FAIL
 
 } from '../../constants/events/eventConstants'
-import { logout } from '../../actions/users/userActions'
 
 export const listEvents = (keyword = '', pageNumber = '') => async (
   dispatch, getState
@@ -31,10 +30,6 @@ export const listEvents = (keyword = '', pageNumber = '') => async (
   } catch (error) {
 
     const message = error.response && error.response.data.message ? error.response.data.message : error.message
-
-    if (message === 'Not authorized, token failed') {
-      dispatch(logout())
-    }
 
     dispatch({
       type: EVENT_LIST_FAIL,
