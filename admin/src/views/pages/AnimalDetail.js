@@ -36,14 +36,20 @@ const EventListScreen = ({ match, history }) => {
       minWidth: '150px'
     },
     {
-      name: 'LOCATIONS',
-      selector: 'locations',
+      name: 'COLOR',
+      selector: 'characteristics.color',
+      sortable: true,
+      minWidth: '100px'
+    },
+    {
+      name: 'DIET',
+      selector: 'characteristics.diet',
       sortable: true,
       minWidth: '100px'
     },
     {
       name: 'LOCATIONS',
-      selector: 'characteristics.color',
+      selector: 'locations',
       sortable: true,
       minWidth: '100px'
     }
@@ -61,12 +67,16 @@ const EventListScreen = ({ match, history }) => {
         const startsWith =
 
           item.name.toLowerCase().startsWith(value.toLowerCase()) ||
-          item.locations.toString().startsWith(value.toString()) 
+          item.locations.toString().startsWith(value.toString()) ||
+          item.characteristics.color.toLowerCase().startsWith(value.toLowerCase()) ||
+          item.characteristics.diet.toLowerCase().startsWith(value.toLowerCase())
 
         const includes =
 
           item.name.toLowerCase().includes(value.toLowerCase()) ||
-          item.locations.toString().includes(value.toString()) 
+          item.locations.toString().includes(value.toString()) ||
+          item.characteristics.color.toLowerCase().includes(value.toLowerCase()) ||
+          item.characteristics.diet.toLowerCase().includes(value.toLowerCase()) 
 
         if (startsWith) {
           return startsWith
