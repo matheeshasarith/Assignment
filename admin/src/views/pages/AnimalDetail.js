@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
 import ReactPaginate from 'react-paginate'
-import { listEvents } from '../../../redux/actions/events/eventActions'
+import { listEvents } from '../../redux/actions/events/eventActions'
 
 const EventListScreen = ({ match, history }) => {
 

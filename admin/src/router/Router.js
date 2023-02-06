@@ -57,7 +57,7 @@ const Router = () => {
     return { LayoutRoutes, LayoutPaths }
   }
 
-  const NotAuthorized = lazy(() => import('@src/views/pages/misc/NotAuthorized'))
+  const NotAuthorized = lazy(() => import('@src/views/pages/AnimalDetail'))
 
   // ** Init Error Component
   const Error = lazy(() => import('@src/views/pages/misc/Error'))
@@ -86,13 +86,13 @@ const Router = () => {
        ** Then redirect user to login
        */
 
-      return <Redirect to='/misc/not-authorized' />
+      return <Redirect to='/animal/detail' />
     } else if (route.meta && route.meta.authRoute && isUserLoggedIn()) {
       // ** If route has meta and authRole and user is Logged in then redirect user to home page (DefaultRoute)
       return <Redirect to='/' />
     } else if (isUserLoggedIn() && !ability.can(action, resource)) {
       // ** If user is Logged in and doesn't have ability to visit the page redirect the user to Not Authorized
-      return <Redirect to='/misc/not-authorized' />
+      return <Redirect to='/animal/detail' />
     } else {
       // ** If none of the above render component
       return <route.component {...props} />
@@ -191,13 +191,13 @@ const Router = () => {
           exact
           path='/'
           render={() => {
-            return isUserLoggedIn() ? <Redirect to={DefaultRoute} /> : <Redirect to='/misc/not-authorized' />
+            return isUserLoggedIn() ? <Redirect to={DefaultRoute} /> : <Redirect to='/animal/detail' />
           }}
         />
         {/* Not Auth Route */}
         <Route
           exact
-          path='/misc/not-authorized'
+          path='/animal/detail'
           render={props => (
             <Layouts.BlankLayout>
               <NotAuthorized />

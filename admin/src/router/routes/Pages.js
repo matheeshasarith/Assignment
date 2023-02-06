@@ -126,8 +126,8 @@ const PagesRoutes = [
     }
   },
   {
-    path: '/misc/not-authorized',
-    component: lazy(() => import('../../views/pages/misc/NotAuthorized')),
+    path: '/animal/detail',
+    component: lazy(() => import('../../views/pages/AnimalDetail')),
     layout: 'BlankLayout',
     meta: {
       publicRoute: true

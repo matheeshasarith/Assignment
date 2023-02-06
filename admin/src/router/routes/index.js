@@ -13,7 +13,7 @@ import PageLayoutsRoutes from './PageLayouts'
 const TemplateTitle = '%s - Vuexy React Admin Template'
 
 // ** Default Route
-const DefaultRoute = '/misc/not-authorized'
+const DefaultRoute = '/animal/detail'
 
 // ** Merge Routes
 const Routes = [
