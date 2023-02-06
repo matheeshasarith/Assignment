@@ -73,51 +73,11 @@ const ExtensionsRoutes = [
     path: '/home',
     component: lazy(() => import('../../views/screens/Home'))
   },
-    
-  {
-    path: '/event-view-Business',
-    component: lazy(() => import('../../views/screens/EventViewBusiness')),
-    // meta: {
-    //   action: 'manage',
-    //   resource: 'ACL'
-    // }
-
-    //layout: 'BlankLayout',
-    meta: {
-      publicRoute: true
-    }
-  },
-  {
-    path: '/eventlistBusinessEvent/:pageNumber',
-    component: lazy(() => import('../../views/screens/EventViewBusiness')),
-    meta: {
-      action: 'manage',
-      resource: 'ACL'
-    }
-  },
-
-  {
-    path: '/event/:id/edit',
-    component: lazy(() => import('../../views/screens/EventEditScreen')),
-    meta: {
-      action: 'manage',
-      resource: 'ACL'
-    }
-  },
-  {
-    path: '/event/create',
-    component: lazy(() => import('../../views/screens/EventCreateScreen')),
-    meta: {
-      action: 'read',
-      resource: 'ACL'
-    }
-  },
   {
     path: '/error',
     component: lazy(() => import('../../views/screens/Error')),
     layout: 'BlankLayout'
   },
- 
   {
 
     path: '/access-control',
